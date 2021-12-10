@@ -4,13 +4,21 @@
     border:black 2px solid;
     text-decoration:none;
     color:black;
-    font-size:1.5em;
+    font-size:100px;
     font-family:sans-serif;
     text-align:center;
 }
   
 .block{
     display:block;
-    width:150px;
     margin:0 auto;
+}
+
+.resizebutton{
+    width:75vw;
+}
+
+.resizeimage{
+    width:25%;
+    height:25%;
 }
