@@ -1,24 +1,42 @@
+main{
+    width: 800px;
+    height: 700px;
+    text-align: center;
+}
+
+#body{
+    text-align: center
+}
+
+#header{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
 .button{
-    background:gold;
-    padding:1em 1em;
-    border:black 2px solid;
-    text-decoration:none;
-    color:black;
-    font-size:100px;
-    font-family:sans-serif;
-    text-align:center;
+    background: gold;
+    padding: 1em 1em;
+    border: black 2px solid;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
 }
   
 .block{
-    display:block;
-    margin:0 auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .resizebutton{
-    width:75vw;
+    width:10%;
 }
 
 .resizeimage{
-    width:25%;
-    height:25%;
+    max-width:150px;
+    min-height:150px;
 }
