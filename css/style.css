@@ -1,15 +1,13 @@
 main{
-    width: 800px;
-    height: 700px;
+    width: 100vmin;
+}
+
+header{
     text-align: center;
 }
 
 body{
     text-align: center
-}
-
-header{
-    text-align: center;
 }
 
 p{
@@ -26,10 +24,11 @@ p{
     font-family: sans-serif;
     text-align: center;
 }
-  
+
 .block{
     display: block;
     margin: 0 auto;
+    border-radius: 20px;
 }
 
 .resizebutton{
@@ -37,6 +36,10 @@ p{
 }
 
 .resizeimage{
-    max-width:150px;
-    min-height:150px;
+    width: 20vmin;
+    height: 20vmin;
+}
+
+.number{
+    font-size: 100vmin;
 }
