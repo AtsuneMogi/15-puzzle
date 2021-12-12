@@ -72,5 +72,29 @@ function move_tile(n){
 
 
 function shuffle(){
-    pass
+    var a, b, c, d;
+    var cnt = 0;
+    while (cnt < SIZE*SIZE*SIZE*SIZE){
+        var n = Math.floor(Math.random()*(SIZE*SIZE-1))+1;
+        for (i = 0; i < SIZE; i++){
+            for (j = 0; j < SIZE; j++){
+                if (B[i][j] == 0){
+                    a = i;
+                    b = j;
+                }
+            }
+        }
+        for (i = 0; i < SIZE; i++){
+            for (j = 0; j < SIZE; j++){
+                if (B[i][j] == n){
+                    c = i;
+                    d = j;
+                }
+            }
+        }
+        if (a == c || b == d){
+            move_tile(n);
+            cnt++;
+        }
+    }
 }
