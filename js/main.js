@@ -5,27 +5,25 @@ var B = [
     [9, 10, 11, 12],
     [13, 14, 15, 0]
 ];
-
-
-var img_1_value, img_2_value;
-var a, b;
+var i, j
 
 function swap(a, b){
-    img_1_value = document.getElementById(a).src;
-    img_2_value = document.getElementById(b).src;
+    
+    var img1 = document.getElementById(a).src;
+    var img2 = document.getElementById(b).src;
+    var id1 = document.getElementById(a).id;
+    var id2 = document.getElementById(b).id;
 
-    document.getElementById(a).src = img_2_value;
-    document.getElementById(b).src = img_1_value;
-    console.log(B);
+    document.getElementById(a).src = img2;
+    document.getElementById(b).src = img1;
+    document.getElementById(a).id = id2;
+    document.getElementById(b).id = id1;
 }
 
 
 function move_tile(n){
 
-    var a = 0;
-    var b = 0;
-    var c = 0; 
-    var d = 0;
+    var a, b, c, d;
     
     for (i = 0; i < SIZE; i++){
         for (j = 0; j < SIZE; j++){
@@ -54,7 +52,7 @@ function move_tile(n){
         }else{
             for (i = 0; i < b-d; i++){
                 [B[a][b-i], B[a][b-i-1]] = [B[a][b-i-1], B[a][b-i]];
-                swap(B[a][b-i], B[a][b-i-1]);
+                swap(B[a][b-i-1], B[a][b-i]);
             }
         }
     }else if (b == d && a != c){
@@ -66,7 +64,7 @@ function move_tile(n){
         }else{
             for (i = 0; i < a-c; i++){
                 [B[a-i][b], B[a-i-1][b]] = [B[a-i-1][b], B[a-i][b]];
-                swap(B[a-i][b], B[a-i-1][b]);
+                swap(B[a-i-1][b], B[a-i][b]);
             }
         }
     }
