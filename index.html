@@ -5,37 +5,35 @@
         <link rel="stylesheet" href="css/style.css">
         <title>15 Puzzle</title>
     </head>
-    <body>
+    <body onload="shuffle();">
         <header id="header">
             <h1>15 Puzzle</h1>
         </header>
         <p>
-            <img class="resizeimage" id="1" src="numbers/1.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="2" src="numbers/2.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="3" src="numbers/3.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="4" src="numbers/4.png" onclick="move_tile(this.id)">
+            <img class="resizeimage" id="1" src="numbers/1.png">
+            <img class="resizeimage" id="2" src="numbers/2.png">
+            <img class="resizeimage" id="3" src="numbers/3.png">
+            <img class="resizeimage" id="4" src="numbers/4.png">
         </p>
         <p>
-            <img class="resizeimage" id="5" src="numbers/5.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="6" src="numbers/6.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="7" src="numbers/7.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="8" src="numbers/8.png" onclick="move_tile(this.id)">
+            <img class="resizeimage" id="5" src="numbers/5.png">
+            <img class="resizeimage" id="6" src="numbers/6.png">
+            <img class="resizeimage" id="7" src="numbers/7.png">
+            <img class="resizeimage" id="8" src="numbers/8.png">
         </p>
         <p>
-            <img class="resizeimage" id="9" src="numbers/9.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="10" src="numbers/10.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="11" src="numbers/11.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="12" src="numbers/12.png" onclick="move_tile(this.id)">
+            <img class="resizeimage" id="9" src="numbers/9.png">
+            <img class="resizeimage" id="10" src="numbers/10.png">
+            <img class="resizeimage" id="11" src="numbers/11.png">
+            <img class="resizeimage" id="12" src="numbers/12.png">
         </p>
         <p>
-            <img class="resizeimage" id="13" src="numbers/13.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="14" src="numbers/14.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="15" src="numbers/15.png" onclick="move_tile(this.id)">
-            <img class="resizeimage" id="0" src="numbers/0.png" onclick="move_tile(this.id)">
-        </p>
-        <div>
+            <img class="resizeimage" id="13" src="numbers/13.png">
+            <img class="resizeimage" id="14" src="numbers/14.png">
+            <img class="resizeimage" id="15" src="numbers/15.png">
+            <img class="resizeimage" id="0" src="numbers/0.png">
             <a class="resizebutton block button" href="#" onclick="shuffle()">Shuffle</a>
-        </div>
+        </p>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
