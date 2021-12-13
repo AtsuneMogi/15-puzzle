@@ -5,7 +5,7 @@ var B = [
     [9, 10, 11, 12],
     [13, 14, 15, 0]
 ];
-
+var GAME = false;
 
 function swap(a, b){
     
@@ -18,6 +18,35 @@ function swap(a, b){
     document.getElementById(b).src = img1;
     document.getElementById(a).id = id2;
     document.getElementById(b).id = id1;
+}
+
+
+function scan_board(){
+
+    var flag = true; 
+
+    for (i = 0; i < SIZE; i++){
+        for (j = 0; j < SIZE; j++){
+            if (B[i][j] != (i*SIZE + j + 1) % SIZE**2){
+                i += SIZE;
+                j += SIZE;
+                flag = false;
+                GAME = false;
+            }
+        }
+    }
+
+    if (flag){
+        GAME = true;
+    }
+}
+
+
+function clear(){
+    
+    for (i = 0; i < SIZE*SIZE; i++){
+        document.getElementById(i).removeAttribute("onclick");
+    }
 }
 
 
@@ -68,13 +97,22 @@ function move_tile(n){
             }
         }
     }
+    
+    scan_board();
+
+    if (GAME){
+        clear();
+    }
 }
 
 
 function shuffle(){
     var a, b, c, d;
     var cnt = 0;
-    while (cnt < SIZE*SIZE*SIZE*SIZE){
+
+    GAME = false;
+
+    while (cnt < 1){
         var n = Math.floor(Math.random()*(SIZE*SIZE-1))+1;
         for (i = 0; i < SIZE; i++){
             for (j = 0; j < SIZE; j++){
@@ -96,5 +134,9 @@ function shuffle(){
             move_tile(n);
             cnt++;
         }
+    }
+
+    for (i = 0; i < SIZE*SIZE; i++){
+        document.getElementById(i).setAttribute('onclick', 'move_tile(this.id)');
     }
 }
