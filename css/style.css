@@ -1,16 +1,17 @@
+html{
+    height: 100%;
+}
+
 main{
     width: 100vmin;
 }
 
-header{
-    text-align: center;
-}
-
 body{
-    text-align: center
+    text-align: center;
+    height: 100%;
 }
 
-p{
+header{
     text-align: center;
 }
 
@@ -22,7 +23,6 @@ p{
     color: black;
     font-size: 25px;
     font-family: sans-serif;
-    text-align: center;
 }
 
 .block{
@@ -33,11 +33,12 @@ p{
 
 .resizebutton{
     width:10%;
+    height: 5%;
 }
 
 .resizeimage{
-    width: 20vmin;
-    height: 20vmin;
+    width: 17vmin;
+    height: 17vmin;
 }
 
 .number{
