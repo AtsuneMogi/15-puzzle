@@ -112,7 +112,7 @@ function shuffle(){
 
     GAME = false;
 
-    while (cnt < 100){
+    while (cnt < 1){
         var n = Math.floor(Math.random()*(SIZE*SIZE-1))+1;
         for (i = 0; i < SIZE; i++){
             for (j = 0; j < SIZE; j++){
