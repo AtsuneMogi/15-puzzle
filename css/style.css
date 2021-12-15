@@ -5,7 +5,40 @@ html{
 main{
     width: 100vmin;
 }
+body{
+    text-align: center;
+}
 
+img{
+    width: 20%;
+    height: auto;
+}
+
+.numbers{
+    max-width: 600px;
+    display: inline-block;
+} 
+
+.function{
+    flex-direction: row;
+    font-size: 30px;
+    display: inline-block;
+}
+
+.button{
+    background: gold;
+    padding: 1em 1em;
+    border: black 2px solid;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin: 0 auto;
+    border-radius: 20px;
+    display: block;
+    width: 100px;
+    height: 40px;
+}
 body{
     text-align: center;
     height: 100%;
