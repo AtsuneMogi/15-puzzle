@@ -32,3 +32,9 @@ img{
     width: 100px;
     height: 40px;
 }
+
+@media screen and (max-width: 1080px){
+    .function{
+        display: block;
+    }
+}
