@@ -4,18 +4,18 @@ body{
 
 img{
     width: 20%;
-    height: auto;
 }
 
 .numbers{
-    max-width: 600px;
     display: inline-block;
+    width: 50%;
 } 
 
 .function{
     flex-direction: row;
     font-size: 30px;
     display: inline-block;
+    vertical-align: text-bottom;
 }
 
 .button{
@@ -33,7 +33,14 @@ img{
     height: 40px;
 }
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1100px){
+    img{
+        width: 24%;
+    }
+    .numbers{
+        display: inline-block;
+        width: 80%;
+    }
     .function{
         display: block;
     }
