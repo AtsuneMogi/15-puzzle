@@ -48,7 +48,7 @@ function count_up(){
 function count_time(n){
     var second = n / 10;
     var minute = Math.floor(second/60);
-    var second = (second % 60).toFixed(1);
+    second = (second % 60).toFixed(1);
     if (second < 10) second = "0" + second;
     if (minute > 9) reset();
     return minute + ":" + second;
