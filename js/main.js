@@ -69,7 +69,7 @@ function swap(a, b){
 // check if the game is cleared
 function scan_board(){
     var flag = true;
-    if (moves == 1){
+    if (moves == 1 && timer_flag == false){
         start();
     }
     for (i = 0; i < SIZE; i++){
