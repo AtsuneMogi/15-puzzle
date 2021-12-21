@@ -55,7 +55,7 @@ img{
     }
     .numbers{
         display: inline-block;
-        width: 80%;
+        width: 100%;
     }
     .function{
         display: block;
