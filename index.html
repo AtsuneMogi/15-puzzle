@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="css/style.css">
         <title>15 Puzzle</title>
     </head>
-    <body onload="shuffle();">
+    <body onload="shuffle();" onselectstart="return false;" onmousedown="return false;">
         <div class="numbers">
             <div>
                 <img id="1" src="numbers/1.png">
@@ -41,13 +41,13 @@
                 <a>Moves: </a>
                 <a id="moves">0</a> 
             </div>
-            <div class="button" onclick="shuffle()">
+            <div class="button" onmousedown="shuffle()">
                 Shuffle    
             </div>
-            <div class="block" onclick="location.href='https://atsunemogi.github.io/8_puzzle/'">
+            <div class="block" onmousedown="location.href='https://atsunemogi.github.io/8_puzzle/'">
                 8 Puzzle
             </div>
-            <div class="block" onclick="location.href='https://atsunemogi.github.io/24_puzzle/'">
+            <div class="block" onmousedown="location.href='https://atsunemogi.github.io/24_puzzle/'">
                 24 Puzzle
             </div>
         </div>
