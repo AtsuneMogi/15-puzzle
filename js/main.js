@@ -91,7 +91,7 @@ function scan_board(){
 function clear(){
     
     for (i = 0; i < SIZE*SIZE; i++){
-        document.getElementById(i).removeAttribute("onclick");
+        document.getElementById(i).removeAttribute("onmousedown");
     }
     start();
     
@@ -186,7 +186,7 @@ function shuffle(){
     }
 
     for (i = 0; i < SIZE*SIZE; i++){
-        document.getElementById(i).setAttribute('onclick', 'move_tile(this.id)');
+        document.getElementById(i).setAttribute('onmousedown', 'move_tile(this.id)');
     }
 
     moves = 0;
