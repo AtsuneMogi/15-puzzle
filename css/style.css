@@ -6,20 +6,13 @@ body{
     text-align: center;
 }
 
-img{
-    width: 19%;
-}
-
 .numbers{
     display: inline-block;
-    width: 60%;
     font-size: 0;
 } 
 
 .function{
-    flex-direction: row;
     font-size: 30px;
-    display: inline-block;
     vertical-align: text-bottom;
 }
 
@@ -53,14 +46,29 @@ img{
     height: 40px;
 }
 
+@media screen and (max-height: 1100px){
+    img{
+        width: 19%;
+    }
+
+    .numbers{
+        width: 60%;
+    }
+
+    .function{
+        display: inline-block;
+    }
+}
+
 @media screen and (max-width: 1100px){
     img{
         width: 25%;
     }
+
     .numbers{
-        display: inline-block;
         width: 100%;
     }
+
     .function{
         display: block;
     }
