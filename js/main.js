@@ -54,14 +54,18 @@ function count_time(n){
     return minute + ":" + second;
 }
 
-// swap two number images
+// swap two numbers
 function swap(a, b){
-    var img1 = document.getElementById(a).src;
-    var img2 = document.getElementById(b).src;
+    var number1 = document.getElementById(a).innerHTML;
+    var number2 = document.getElementById(b).innerHTML;
+    var class1 = document.getElementById(a).className;
+    var class2 = document.getElementById(b).className;
     var id1 = document.getElementById(a).id;
     var id2 = document.getElementById(b).id;
-    document.getElementById(a).src = img2;
-    document.getElementById(b).src = img1;
+    document.getElementById(a).innerHTML = number2;
+    document.getElementById(b).innerHTML = number1;
+    document.getElementById(a).className = class2;
+    document.getElementById(b).className = class1;
     document.getElementById(a).id = id2;
     document.getElementById(b).id = id1;
 }
