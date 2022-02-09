@@ -6,12 +6,58 @@ body{
     text-align: center;
 }
 
+.red{
+    background: rgb(255, 100, 100);
+}
+
+.purple{
+    background: rgb(255, 100, 255);
+}
+
+.blue{
+    background: rgb(100, 100, 251);
+}
+
+.green{
+    background: rgb(0, 255, 0);
+}
+
+.greenyellow{
+    background: rgb(193, 255, 100);
+}
+
+.yellow{
+    background: rgb(255, 255, 50);
+}
+
+.square{
+    font-size: 60px;
+    font-weight: 800;
+    display: inline-block;
+    width: 20%;
+    padding: 5px;
+    margin: 0 auto;
+   
+}
+
+.number{
+    color: black;
+    border: black 2px solid;
+    border-radius: 20px;
+}
+
+.empty{
+    color: white;
+}
+
 .numbers{
+    width: 55%;
     display: inline-block;
     font-size: 0;
 } 
 
 .function{
+    display: inline-block;
     font-size: 30px;
     vertical-align: text-bottom;
 }
@@ -46,25 +92,7 @@ body{
     height: 40px;
 }
 
-@media screen and (max-height: 1100px){
-    img{
-        width: 19%;
-    }
-
-    .numbers{
-        width: 55%;
-    }
-
-    .function{
-        display: inline-block;
-    }
-}
-
 @media screen and (max-width: 1100px){
-    img{
-        width: 25%;
-    }
-
     .numbers{
         width: 100%;
     }
