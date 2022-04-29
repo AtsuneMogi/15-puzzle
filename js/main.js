@@ -93,13 +93,12 @@ function scan_board(){
 
 // if the game cleared, disable click
 function clear(){
-    
     for (i = 0; i < SIZE*SIZE; i++){
         document.getElementById(i).removeAttribute("ontouchstart");
         document.getElementById(i).removeAttribute("onmousedown");
     }
     start();
-    
+    document.onkeydown = false;
 }
 
 // count the number of time that the numbers are moved
@@ -161,6 +160,74 @@ function move_tile(n){
     }
 }
 
+
+function move_R() {
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++) {
+            if (B[i][j] == 0) {
+                if (j > 0) {
+                    move_tile(B[i][j-1]);
+                }
+            }
+        }
+    }
+}
+
+
+function move_L() {
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++) {
+            if (B[i][j] == 0) {
+                if (j < SIZE-1) {
+                    move_tile(B[i][j+1]);
+                }
+            }
+        }
+    }
+}
+
+
+function move_U() {
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++) {
+            if (B[i][j] == 0) {
+                if (i < SIZE-1) {
+                    move_tile(B[i+1][j]);
+                }
+            }
+        }
+    }
+}
+
+
+function move_D() {
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++) {
+            if (B[i][j] == 0) {
+                if (i > 0) {
+                    move_tile(B[i-1][j]);
+                }
+            }
+        }
+    }
+}
+
+
+function key_down(e) {
+    if (e.keyCode == 68 || e.keyCode == 39) {
+        move_R();
+    }
+    if (e.keyCode == 65 || e.keyCode == 37) {
+        move_L();
+    }
+    if (e.keyCode == 87 || e.keyCode == 38) {
+        move_U();
+    }
+    if (e.keyCode == 83 || e.keyCode == 40) {
+        move_D();
+    }
+}
+
 // shuffle numbers
 function shuffle(){
     var a, b, c, d;
@@ -197,6 +264,7 @@ function shuffle(){
 
     moves = 0;
     document.getElementById("moves").innerText = 0;
+    document.onkeydown = key_down;
     reset();
     
 }
